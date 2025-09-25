@@ -20,32 +20,4 @@ if (form) {
         statusEl.textContent = 'Thanks! Your request has been sent. I will reply by email.';
         form.reset();
       } else {
-        statusEl.textContent = 'There was a problem sending your request.';
-      }
-    } catch (err) {
-      statusEl.textContent = 'Network error. Please try again later.';
-    }
-  });
-}
-
-// ---------- Scroll Reveal Animations ----------
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('in');
-      observer.unobserve(entry.target); // reveal once
-    }
-  });
-}, { threshold: 0.15 });
-
-// Apply reveal to cards, form, and any .reveal elements
-document.querySelectorAll('.card, .form, .reveal').forEach(el => observer.observe(el));
-
-// ---------- Parallax Hero Background ----------
-const hero = document.querySelector('.hero');
-if (hero) {
-  window.addEventListener('scroll', () => {
-    const offset = window.scrollY * 0.3;
-    hero.style.backgroundPosition = `center ${offset}px`;
-  });
-}
+        statusEl.textContent = 'There
