@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YourHelpingFriend — Creative services on request</title>
-  <meta name="description" content="YourHelpingFriend offers creative, flexible services: design, writing, Python, research, tarot, templates, mood boards, and more." />
+  <title>YourHelpingFriend — Creative, flexible services</title>
+  <meta name="description" content="Design, writing, Python, research, tarot, templates, mood boards — flexible, anonymous, on your terms." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-content">
+  <!-- Sticky glass nav -->
+  <header class="nav">
+    <div class="container nav-inner">
       <div class="brand">
         <span class="logo">YHF</span>
-        <h1>YourHelpingFriend</h1>
+        <span class="name">YourHelpingFriend</span>
       </div>
-      <nav class="nav">
+      <nav class="links">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#request">Request</a>
@@ -26,36 +26,67 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="home" class="section hero">
-      <div class="container center">
-        <h2>Creative help, on your terms</h2>
-        <p>I’m YourHelpingFriend. I offer flexible, creative services — from design and writing to tarot and templates. I only take on work I enjoy and can do well. Timelines are flexible, and your trust matters.</p>
-        <a href="#request" class="btn primary">Request a service</a>
+    <!-- Hero with parallax background -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <h1 class="mega">Creative help, on your terms.</h1>
+        <p class="lead">Design, writing, Python, research, tarot, templates — I accept only what I can do well. Flexible timelines. Privacy first.</p>
+        <div class="cta">
+          <a href="#request" class="btn btn-primary">Request a service</a>
+          <a href="#services" class="btn btn-ghost">Explore services</a>
+        </div>
+        <div class="scroll-indicator">▼</div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-      <div class="container">
-        <h2>Services</h2>
-        <div class="cards">
-          <article class="card"><h3>Graphic design</h3><p>Logos, posts, posters, branding, thumbnails.</p></article>
-          <article class="card"><h3>Short story writing</h3><p>Original stories, edits, creative copies.</p></article>
-          <article class="card"><h3>Basic Python</h3><p>Small scripts, debugging, guided examples.</p></article>
-          <article class="card"><h3>Research</h3><p>Summaries, references, structured notes.</p></article>
-          <article class="card"><h3>Tarot reading</h3><p>Reflective tarot guidance for clarity.</p></article>
-          <article class="card"><h3>Canva templates</h3><p>Custom templates for posts, resumes, boards.</p></article>
-          <article class="card"><h3>Mood/vision boards</h3><p>Curated boards to visualize goals and vibes.</p></article>
-          <article class="card"><h3>Custom requests</h3><p>Ask for anything related — I’ll confirm if I can.</p></article>
+    <!-- Showcase strip (Apple-like sectioning) -->
+    <section class="strip">
+      <div class="container strip-grid">
+        <div class="panel reveal">
+          <h2>Design that feels right</h2>
+          <p>Logos, posts, posters, branding, thumbnails — crafted to match your vibe.</p>
+        </div>
+        <div class="panel reveal">
+          <h2>Words with intention</h2>
+          <p>Short stories, edits, creative copy — concise, evocative, yours.</p>
+        </div>
+        <div class="panel reveal">
+          <h2>Lightweight Python</h2>
+          <p>Small scripts, debugging, guided examples — practical and clear.</p>
         </div>
       </div>
     </section>
 
-    <!-- Request Form -->
-    <section id="request" class="section alt">
+    <!-- Services grid (hover lift + glow) -->
+    <section id="services" class="section">
       <div class="container">
-        <h2>Make a request</h2>
+        <h2 class="section-title">Services</h2>
+        <div class="cards">
+          <article class="card reveal"><h3>Graphic design</h3><p>Logos, posts, posters, branding, thumbnails.</p></article>
+          <article class="card reveal"><h3>Short story writing</h3><p>Original stories, edits, creative copies.</p></article>
+          <article class="card reveal"><h3>Basic Python</h3><p>Small scripts, debugging, guided examples.</p></article>
+          <article class="card reveal"><h3>Research</h3><p>Summaries, references, structured notes.</p></article>
+          <article class="card reveal"><h3>Tarot reading</h3><p>Reflective tarot guidance for clarity.</p></article>
+          <article class="card reveal"><h3>Canva templates</h3><p>Custom templates for posts, resumes, boards.</p></article>
+          <article class="card reveal"><h3>Mood/vision boards</h3><p>Curated boards to visualize goals and vibes.</p></article>
+          <article class="card reveal"><h3>Custom requests</h3><p>Ask for anything related — I’ll confirm if I can.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BTS/HYBE-inspired marquee -->
+    <section class="marquee">
+      <div class="track">
+        <span>Flexible • Anonymous • Thoughtful • Creative • Selective • Trust • Quality •</span>
+        <span>Flexible • Anonymous • Thoughtful • Creative • Selective • Trust • Quality •</span>
+      </div>
+    </section>
+
+    <!-- Request form (clean, centered, timeline text input) -->
+    <section id="request" class="section alt">
+      <div class="container narrow">
+        <h2 class="section-title">Make a request</h2>
         <form id="requestForm" action="https://formspree.io/f/xanpnjol" method="POST" class="form" novalidate>
           <div class="form-row">
             <label for="name">Your name or alias</label>
@@ -88,21 +119,21 @@
             <input type="text" id="timeline" name="timeline" placeholder="e.g., 5 days, by Friday, flexible" />
           </div>
           <input type="hidden" name="_subject" value="New request via YourHelpingFriend" />
-          <button type="submit" class="btn primary">Submit request</button>
+          <button type="submit" class="btn btn-primary full">Submit request</button>
           <p id="formStatus" class="form-status"></p>
         </form>
-        <p class="note"><strong>Note:</strong> Payment details will be shared by email only after I confirm your request.</p>
+        <p class="note">Payment details will be shared by email only after I confirm your request.</p>
       </div>
     </section>
 
     <!-- Terms -->
     <section id="terms" class="section">
-      <div class="container">
-        <h2>Terms & Privacy</h2>
+      <div class="container narrow">
+        <h2 class="section-title">Terms & privacy</h2>
         <ul class="bullets">
           <li>I only take on work I enjoy or can do well.</li>
           <li>Timelines are flexible; no fixed promises.</li>
-          <li>Communication is by email/chat only.</li>
+          <li>Communication is by email or chat only.</li>
           <li>I keep my identity private.</li>
           <li>Payment details shared only after acceptance.</li>
         </ul>
@@ -111,15 +142,15 @@
 
     <!-- Contact -->
     <section id="contact" class="section alt">
-      <div class="container">
-        <h2>Contact</h2>
+      <div class="container narrow">
+        <h2 class="section-title">Contact</h2>
         <p>Email me or use the request form. I’ll reply if I can take your work.</p>
-        <p><a href="mailto:manasvisingh014@gmail.com">manasvisingh014@gmail.com</a></p>
+        <p><a class="link-strong" href="mailto:manasvisingh014@gmail.com">manasvisingh014@gmail.com</a></p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container">
       <p>© <span id="year"></span> YourHelpingFriend — All rights reserved.</p>
     </div>
@@ -127,15 +158,15 @@
 
   <!-- Tawk.to Chat -->
   <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/68d520800a2eb21927877f80/1j608dtq4';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68d520800a2eb21927877f80/1j608dtq4';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
   </script>
 
   <script src="script.js"></script>
