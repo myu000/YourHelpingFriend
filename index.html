@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YourHelpingFriend — Creative, flexible services</title>
   <meta name="description" content="Design, writing, Python, research, tarot, templates, mood boards — flexible, anonymous, on your terms." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -27,8 +32,7 @@
 
   <main>
     <!-- Hero -->
-    <section id="home" class="hero">
-      <div class="hero-bg"></div>
+    <section id="home" class="hero reveal">
       <div class="container hero-content">
         <h1 class="mega">Creative help, on your terms.</h1>
         <p class="lead">No contracts, no templates — I accept only what I can do well. Flexible timelines. Privacy first.</p>
@@ -44,14 +48,14 @@
       <div class="container">
         <h2 class="section-title">Services</h2>
         <div class="cards">
-          <article class="card"><h3>Graphic design</h3><p>Logos, posters, branding, thumbnails.</p></article>
-          <article class="card"><h3>Short story writing</h3><p>Original stories, edits, creative copies.</p></article>
-          <article class="card"><h3>Basic Python</h3><p>Small scripts, debugging, guided examples.</p></article>
-          <article class="card"><h3>Research</h3><p>Summaries, references, structured notes.</p></article>
-          <article class="card"><h3>Tarot reading</h3><p>Reflective tarot guidance for clarity.</p></article>
-          <article class="card"><h3>Canva templates</h3><p>Custom templates for posts, resumes, boards.</p></article>
-          <article class="card"><h3>Mood/vision boards</h3><p>Curated boards to visualize goals and vibes.</p></article>
-          <article class="card"><h3>Custom requests</h3><p>Ask for anything related — I’ll confirm if I can.</p></article>
+          <article class="card reveal"><h3>Graphic design</h3><p>Logos, posters, branding, thumbnails.</p></article>
+          <article class="card reveal"><h3>Short story writing</h3><p>Original stories, edits, creative copies.</p></article>
+          <article class="card reveal"><h3>Basic Python</h3><p>Small scripts, debugging, guided examples.</p></article>
+          <article class="card reveal"><h3>Research</h3><p>Summaries, references, structured notes.</p></article>
+          <article class="card reveal"><h3>Tarot reading</h3><p>Reflective tarot guidance for clarity.</p></article>
+          <article class="card reveal"><h3>Canva templates</h3><p>Custom templates for posts, resumes, boards.</p></article>
+          <article class="card reveal"><h3>Mood/vision boards</h3><p>Curated boards to visualize goals and vibes.</p></article>
+          <article class="card reveal"><h3>Custom requests</h3><p>Ask for anything related — I’ll confirm if I can.</p></article>
         </div>
       </div>
     </section>
@@ -60,7 +64,7 @@
     <section id="request" class="section alt">
       <div class="container narrow">
         <h2 class="section-title">Make a request</h2>
-        <form id="requestForm" action="https://formspree.io/f/xanpnjol" method="POST" class="form" novalidate>
+        <form id="requestForm" action="https://formspree.io/f/xanpnjol" method="POST" class="form reveal" novalidate>
           <div class="form-row">
             <label for="name">Your name or alias</label>
             <input type="text" id="name" name="name" required />
@@ -103,7 +107,7 @@
     <section id="terms" class="section">
       <div class="container narrow">
         <h2 class="section-title">Terms & Privacy</h2>
-        <ul class="bullets">
+        <ul class="bullets reveal">
           <li>I only take on work I enjoy or can do well.</li>
           <li>Timelines are flexible; no fixed promises.</li>
           <li>Communication is by email/chat only.</li>
@@ -117,7 +121,7 @@
     <section id="contact" class="section alt">
       <div class="container narrow">
         <h2 class="section-title">Contact</h2>
-        <p>Email me or use the request form. I’ll reply if I can take your work.</p>
+        <p class="reveal">Email me or use the request form. I’ll reply if I can take your work.</p>
         <p><a class="link-strong" href="mailto:manasvisingh014@gmail.com">manasvisingh014@gmail.com</a></p>
       </div>
     </section>
