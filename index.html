@@ -1,151 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="default">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YourHelpingFriend — Creative, flexible services</title>
-  <meta name="description" content="Design, writing, Python, research, tarot, templates, mood boards — flexible, anonymous, on your terms." />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
+  <title>YourHelpingBuddy — Chat</title>
+  <meta name="description" content="A free, chat-first helper that curates mood boards with playful, elegant vibes.">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Sticky nav -->
-  <header class="nav">
-    <div class="container nav-inner">
-      <div class="brand">
-        <span class="logo">YHF</span>
-        <span class="name">YourHelpingFriend</span>
-      </div>
-      <nav class="links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#request">Request</a>
-        <a href="#terms">Terms</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <header class="topbar">
+    <div class="brand">YourHelpingBuddy</div>
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="home" class="hero reveal">
-      <div class="container hero-content">
-        <h1 class="mega">Creative help, on your terms.</h1>
-        <p class="lead">No contracts, no templates — I accept only what I can do well. Flexible timelines. Privacy first.</p>
-        <div class="cta">
-          <a href="#request" class="btn btn-primary">Request a service</a>
-          <a href="#services" class="btn btn-ghost">Explore services</a>
-        </div>
-      </div>
-    </section>
+  <main class="app">
+    <section id="chatWindow" class="chat-window" aria-live="polite"></section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <div class="cards">
-          <article class="card reveal"><h3>Graphic design</h3><p>Logos, posters, branding, thumbnails.</p></article>
-          <article class="card reveal"><h3>Short story writing</h3><p>Original stories, edits, creative copies.</p></article>
-          <article class="card reveal"><h3>Basic Python</h3><p>Small scripts, debugging, guided examples.</p></article>
-          <article class="card reveal"><h3>Research</h3><p>Summaries, references, structured notes.</p></article>
-          <article class="card reveal"><h3>Tarot reading</h3><p>Reflective tarot guidance for clarity.</p></article>
-          <article class="card reveal"><h3>Canva templates</h3><p>Custom templates for posts, resumes, boards.</p></article>
-          <article class="card reveal"><h3>Mood/vision boards</h3><p>Curated boards to visualize goals and vibes.</p></article>
-          <article class="card reveal"><h3>Custom requests</h3><p>Ask for anything related — I’ll confirm if I can.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Request Form -->
-    <section id="request" class="section alt">
-      <div class="container narrow">
-        <h2 class="section-title">Make a request</h2>
-        <form id="requestForm" action="https://formspree.io/f/xanpnjol" method="POST" class="form reveal" novalidate>
-          <div class="form-row">
-            <label for="name">Your name or alias</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-row">
-            <label for="email">Contact email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-row">
-            <label for="service">Service type</label>
-            <select id="service" name="service" required>
-              <option value="">Select</option>
-              <option>Graphic design</option>
-              <option>Short story writing</option>
-              <option>Basic Python</option>
-              <option>Research</option>
-              <option>Tarot reading</option>
-              <option>Canva template</option>
-              <option>Mood/vision board</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="details">Describe your request</label>
-            <textarea id="details" name="details" rows="6" required></textarea>
-          </div>
-          <div class="form-row">
-            <label for="timeline">Preferred timeline</label>
-            <input type="text" id="timeline" name="timeline" placeholder="e.g., 5 days, by Friday, flexible" />
-          </div>
-          <input type="hidden" name="_subject" value="New request via YourHelpingFriend" />
-          <button type="submit" class="btn btn-primary full">Submit request</button>
-          <p id="formStatus" class="form-status"></p>
-        </form>
-        <p class="note">Payment details will be shared by email only after I confirm your request.</p>
-      </div>
-    </section>
-
-    <!-- Terms -->
-    <section id="terms" class="section">
-      <div class="container narrow">
-        <h2 class="section-title">Terms & Privacy</h2>
-        <ul class="bullets reveal">
-          <li>I only take on work I enjoy or can do well.</li>
-          <li>Timelines are flexible; no fixed promises.</li>
-          <li>Communication is by email/chat only.</li>
-          <li>I keep my identity private.</li>
-          <li>Payment details shared only after acceptance.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section alt">
-      <div class="container narrow">
-        <h2 class="section-title">Contact</h2>
-        <p class="reveal">Email me or use the request form. I’ll reply if I can take your work.</p>
-        <p><a class="link-strong" href="mailto:manasvisingh014@gmail.com">manasvisingh014@gmail.com</a></p>
-      </div>
-    </section>
+    <div class="input-area">
+      <input id="userInput" type="text" placeholder="Type your reply..." autocomplete="off" />
+      <button id="sendBtn" class="btn-pill">➤</button>
+    </div>
   </main>
 
+  <button id="surpriseBtn" class="surprise">✨ Surprise me</button>
+
   <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> YourHelpingFriend — All rights reserved.</p>
-    </div>
+    <span>© <span id="year"></span> YourHelpingBuddy — Free, playful, and personal</span>
   </footer>
 
-  <!-- Tawk.to Chat -->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/68d520800a2eb21927877f80/1j608dtq4';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
