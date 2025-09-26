@@ -128,7 +128,7 @@ form {
   gap: 1rem;
 }
 
-input, textarea {
+input, textarea, select {
   padding: 0.8rem;
   border: 1px solid var(--line);
   border-radius: 6px;
