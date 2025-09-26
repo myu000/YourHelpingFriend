@@ -17,12 +17,12 @@
     <a href="#intro">Intro</a>
     <a href="#services">Services</a>
     <a href="#request">Request</a>
-    <a href="#projects">Projects</a>
   </nav>
 
   <section id="intro">
     <p>I’m YourHelpingFriend. I offer flexible, creative services — from design and writing to tarot and templates.  
     I only take on work I enjoy and can do well. Timelines are flexible, and your trust matters.</p>
+    <p><strong>All services are free.</strong></p>
     <p><strong>Request a service.</strong></p>
   </section>
 
@@ -44,22 +44,26 @@
     <h2>Submit a Request</h2>
     <form action="https://formspree.io/forms/xanpnjol" method="POST">
       <input type="text" name="name" placeholder="Your name" required>
-      <input type="text" name="username" placeholder="Preferred username" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <select name="service" required>
+        <option value="">Select a service</option>
+        <option value="Graphic Design">Graphic Design</option>
+        <option value="Short Story Writing">Short Story Writing</option>
+        <option value="Basic Python">Basic Python</option>
+        <option value="Research">Research</option>
+        <option value="Tarot Reading">Tarot Reading</option>
+        <option value="Canva Templates">Canva Templates</option>
+        <option value="Mood/Vision Boards">Mood/Vision Boards</option>
+        <option value="Custom Request">Custom Request</option>
+      </select>
       <textarea name="request" rows="5" placeholder="Describe your request..." required></textarea>
+      <input type="text" name="timeline" placeholder="Preferred timeline (e.g. 2 days)" required>
       <button type="submit">Send Request</button>
     </form>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="services">
-      <div class="card"><h3>Logo Concept</h3><p>Delivered — <a href="#">Download</a></p></div>
-      <div class="card"><h3>Landing Page Copy</h3><p>In Review</p></div>
-    </div>
-  </section>
-
   <footer>
-    <small>© 2025 YourHelpingBuddy — All rights reserved.</small>
+    <small>© 2025 YourHelpingBuddy — All services are free. I only accept work I enjoy and can do well.</small>
   </footer>
 
   <script src="script.js"></script>
